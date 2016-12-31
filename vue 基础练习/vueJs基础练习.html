@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> vue基础知识</title>
+	<link rel="icon" href="title.png" type="image/x-icon">
+	<style>
+	div{
+		display: block;
+	}
+
+	</style>
+</head>
+	<script src = "vue.js"></script>
+
+<body>	
+
+	<div id="box">{{message}}
+		<span> </span>
+		<input type="text" v-model="message">
+		<input type="text" :value="message">
+	</div>
+</body>
+<script>
+    //通过new一个Vue实例　在（）中传入一个ｊｓｏｎ形式的对象，
+    //属性名分别为 el：绑定的dom对象 支持css选择器。同时表示这个new的Vue实例只在这个dom对象内生效;
+    //             data：提供数据;
+    //             methods：提供函数方法;
+    //v-moudel可以在表单中绑定数据; v-moudel和v-vind:value的区别：  前者双向绑定，后者 单项绑定（box中message改变才改变）
+    //new Vue 会return 一个data; box === data;
+
+	var box =new Vue({
+		el:"#box",
+		data:{
+			message:"hello world",
+		},
+	})
+
+	</script>
+</html>
